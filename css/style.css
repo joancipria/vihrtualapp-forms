@@ -1,0 +1,41 @@
+body {
+  background-color: #e0f4ff;
+}
+input {
+  accent-color: #3f51b5;
+}
+
+header.card-header {
+  background-color: #485fc7;
+}
+
+.card-header-title {
+  font-weight: inherit;
+  color: white;
+}
+
+.radio span {
+  display: block;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 0.75rem !important;
+}
+.card:not(:first-child) .card-header {
+  display: none !important;
+}
+.label::after {
+  content: " *";
+  color: #f14668;
+}
+#qrcode img {
+  display: initial !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .scale label {
+    text-align: center;
+    max-width: 20%;
+    display: inline-grid;
+  }
+}
