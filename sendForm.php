@@ -82,7 +82,7 @@ store(
     $_POST["c13"],   
     $_POST["c14"],   
     $_POST["c15"],   
-    $_POST["c16"],   
+    $_POST["c16"]   
 );
 ?>
 </body>
