@@ -164,6 +164,7 @@
                                 <div class="card-content">
                                     <div class="content">
                                         <div id="qrcode"></div>
+                                        <a target="_blank" id="manualLink" href="">Acceder manualmente</a>
                                         <h2 class="subtitle">Escanea el código QR con tu móvil y accede a VIHrtual-App
                                         </h2>
 
@@ -227,6 +228,7 @@
         // Generate QR code with ID param
         var qrcode = new QRCode("qrcode");
         qrcode.makeCode("http://vihrtualapp.gti-ia.upv.es?id=" + id);
+        document.getElementById("manualLink").href = "http://vihrtualapp.gti-ia.upv.es?id=" + id;
     </script>
 
 </body>
