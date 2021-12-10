@@ -65,7 +65,7 @@ if (isset($_POST["id"])) {
 } 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html style="height: 100%" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
