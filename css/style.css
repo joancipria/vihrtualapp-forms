@@ -1,5 +1,9 @@
+html {
+  height: 100%;
+}
 body {
   background-color: #e0f4ff;
+  height: 100%;
 }
 input {
   accent-color: #3f51b5;
