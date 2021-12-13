@@ -1,5 +1,6 @@
 <?php require('db.php')?>
 <?php
+// Id ID is set
 if (isset($_POST["id"])) {
     // Store form result
     $check = store(
@@ -62,50 +63,14 @@ if (isset($_POST["id"])) {
         $_POST["c15"],   
         $_POST["c16"]   
     );
-} 
-?>
-<!DOCTYPE html>
-<html style="height: 100%" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enviar</title>
-    <link rel="stylesheet" href="./css/bulma.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <!-- Success message -->
-    <section class="section">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="content">
-                            <?php
-                            if (isset($_POST["id"])) {
-                                if ($check != 0){
-                                    echo '<h1 class="title">¡Encuesta guardada con éxito!</h1>';
-                                    echo '<a href="index.php" class="button is-link">Nueva encuesta</a>';
-                                }else{
-                                    echo '<span class="tag is-danger is-light is-medium">Error</span>';
-                                    echo '<h1 class="title">No se pudo guardar la encuesta.</h1>';
-                                    echo '<a onclick="history.back()" class="button is-link">Probar de nuevo</a>';
-                                }
 
-                            } else{
-                                echo '<span class="tag is-danger is-light is-medium">Error</span>';
-                                echo '<h1 class="title">ID no encontrado.</h1>';
-                                echo '<a onclick="history.back()" class="button is-link">Probar de nuevo</a>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>                       
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+    // Check DB response
+    if ($check != 0){
+        echo 'valid';
+    }else{
+        echo 'invalid';
+    }
+}else{
+    echo 'noid';
+}
+?>

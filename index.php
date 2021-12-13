@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta - VIHrtual-App</title>
     <link rel="stylesheet" href="./css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/octoshrimpy/bulma-o-steps/master/bulma-steps.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/qrcode.min.js"></script>
@@ -18,22 +20,84 @@
         <div class="container">
         </div>
         <div id="tab-content" class="container">
-            <form id="form" action="./sendForm.php" method="post">
-
+            <form id="form" action="" method="post">
                 <input id="id" name="id" type="text" hidden>
-
-                <span class="is-active" data-content="1">
-                    <div class="columns">
-                        <div class="column is-half is-offset-one-quarter">
-                            <h1 class="title">Encuesta VIHrtual-App</h1>
-                        </div>
+                <div class="columns">
+                    <div class="column is-half is-offset-one-quarter">
+                        <h1 class="title">Encuesta VIHrtual-App</h1>
+                        <ul class="steps">
+                            <li class="steps-segment is-active">
+                                <span class="steps-marker">
+                                    1
+                                    <!-- <span class="icon">
+                                        <i data-feather="user"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
+                                <span class="steps-marker">
+                                    2
+                                    <!-- <span class="icon">
+                                        <i data-feather="clipboard"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
+                                <span class="steps-marker">
+                                    3
+                                    <!-- <span class="icon">
+                                        <i data-feather="smartphone"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
+                                <span class="steps-marker">
+                                    4
+                                    <!-- <span class="icon">
+                                        <i data-feather="clipboard"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
+                                <span class="steps-marker">
+                                    5
+                                    <!-- <span class="icon">
+                                        <i data-feather="clipboard"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
+                                <span class="steps-marker">
+                                    6
+                                    <!-- <span class="icon">
+                                        <i data-feather="clipboard"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
+                                <span class="steps-marker">
+                                    <span class="icon">
+                                        <i data-feather="check"></i>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+                <span class="form-section form-section-active">
                     <div class="columns">
                         <div class="column is-half is-offset-one-quarter">
                             <div class="card">
                                 <header class="card-header">
                                     <p class="card-header-title subtitle">1. General</p>
                                 </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un chatbot para ofrecer información sobre el VIH y el SIDA. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> A continuación te pediremos que rellenes una serie de encuestas y pruebes el chatbot para que nos puedas dar tu opinión. Lee y sigue atentamente las instrucciones que se indiquen en cada paso y pulsa el botón 'Siguiente' para avanzar. <br><br>Para empezar, rellena los siguientes datos y pulsa en el botón 'Siguiente' para continuar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
                                 <div class="card-content">
                                     <div class="content">
                                         <div class="field">
@@ -85,6 +149,10 @@
                                                     <input type="radio" value="superior" name="studies">
                                                     Educación superior
                                                 </label>
+                                                <label class="radio">
+                                                    <input type="radio" value="superior" name="studies">
+                                                    Sin estudios
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -130,13 +198,38 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <!-- <button onclick="prev()" class="button is-link">Anterior</button> -->
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </span>
-                <span data-content="2">
+                <span class="form-section">
                     <div class="columns">
                         <div class="column is-half is-offset-one-quarter">
+                        <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">2. Conocimiento previo</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">A continuación deseamos saber tus conocimientos actuales sobre el VIH. Indica si a las siguientes afirmaciones son verdaderas o falsas. En caso de no saber la respuesta marca la opción 'No lo sé'.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <?php
                                 $hivCounter = 1;
                                 
@@ -146,15 +239,32 @@
                                     $id = 'k'. $hivCounter;
 
                                     // Render answer
-                                    printTrueFalseQuestion($text,$id, "2. Conocimiento previo");
+                                    printTrueFalseQuestion($text,$id);
                                     
                                     $hivCounter +=1;
                                 }
-                                ?>
+                            ?>
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </span>
-                <span data-content="2">
+                <span class="form-section">
                     <div class="columns">
                         <div class="column has-text-centered is-half is-offset-one-quarter">
                             <div class="card">
@@ -163,20 +273,96 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
+                                        <p class="instructions">Ha llegado el momento de probar el VIHrtual-App y realizarle algunas preguntas al chatbot. Utiliza tu teléfono móvil para escanear el código QR y acceder a la aplicación. Una vez hayas accedido, pulsa 'Siguiente' para continuar.<br><br> En caso de no poder escanearlo, haz click sobre el enlace situado debajo del QR 'Acceder manualmente'.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="content">
                                         <div id="qrcode"></div>
                                         <a target="_blank" id="manualLink" href="">Acceder manualmente</a>
                                         <h2 class="subtitle">Escanea el código QR con tu móvil y accede a VIHrtual-App
                                         </h2>
-
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </span>
-                <span data-content="2">
+                <span class="form-section">
+                    <div class="columns">
+                        <div class="column has-text-centered is-half is-offset-one-quarter">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">4. Tareas</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">Tareas ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="content">
+                                        <h2 class="subtitle">Tarea 1
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </span>
+                <span class="form-section">
                     <div class="columns">
                         <div class="column is-half is-offset-one-quarter">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">5. Conocimiento posterior</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">A continuación deseamos si tus conocimientos sobre el VIH han mejorado después de utilizar VIHrtual-App. Para ello responderas de nuevo a la encuesta anterior. Indica si a las siguientes afirmaciones son verdaderas o falsas. En caso de no saber la respuesta marca la opción 'No lo sé'.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <?php
                             // For each HIV-KQ-18 question
                             foreach($hiv18 as $text) {
@@ -184,16 +370,44 @@
                                 $id = 'k'. $hivCounter;
 
                                 // Render answer
-                                printTrueFalseQuestion($text,$id, "4. Conocimiento posterior");
+                                printTrueFalseQuestion($text,$id);
                                 $hivCounter +=1;
                             }
-                        ?>
+                            ?>
+
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </span>
-                <span data-content="2">
+                <span class="form-section">
                     <div class="columns">
                         <div class="column is-half is-offset-one-quarter">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">6. Usabilidad</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">Por último, queremos que valores tu experiencia con VIHrtual-App. Valora tu conformidad con las siguientes afirmaciones utilizando una escala del 1 al 5, siendo 1 que estás totalmente en desacuerdo y el 5 totalmente de acuerdo.<br><br> Una vez contestadas todas la preguntas, pulsa 'Enviar' para finalizar la encuesta</p>
+                                    </div>
+                                </div>
+                            </div>
                             <?php
                                 $cuqCounter = 1;
                                 
@@ -202,13 +416,32 @@
                                     // Set answer id
                                     $id = 'c'. $cuqCounter;
 
-                                    printScaleQuestion($text,$id, "5. Usabilidad");
+                                    printScaleQuestion($text,$id);
                                     $cuqCounter +=1;
                                 }
                             ?>
                             <div class="field is-grouped is-grouped-centered">
                                 <div class="control">
                                     <input type="submit" class="button is-link" value="Enviar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <span class="form-section">
+                    <div class="columns">
+                        <div class="column is-half is-offset-one-quarter has-text-centered">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">Resultado</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <h1 id="result" class="title"></h1>
+                                        <p >Muchas gracias por participar.</p>
+                                        <br>
+                                        <a href="index.php" class="button is-link">Nueva encuesta</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +462,11 @@
         var qrcode = new QRCode("qrcode");
         qrcode.makeCode("http://vihrtualapp.gti-ia.upv.es?id=" + id);
         document.getElementById("manualLink").href = "http://vihrtualapp.gti-ia.upv.es?id=" + id;
+        
+        // Feather icons
+        feather.replace();
     </script>
+    <script src="js/form.js"></script>
 
 </body>
 

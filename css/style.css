@@ -1,42 +1,87 @@
-body {
-  background-color: #e0f4ff;
-  height: 100%;
+/* COLORS */
+
+:root {
+    --primary-color: #485fc7;
+    --secondary-color: #3f51b5;
 }
+
+html {
+    background-color: #e0f4ff;
+}
+
+body {
+    background-color: #e0f4ff;
+    height: 100%;
+}
+
 input {
-  accent-color: #3f51b5;
+    accent-color: var(--secondary-color);
 }
 
 header.card-header {
-  background-color: #485fc7;
+    background-color: var(--primary-color);
 }
 
 .card-header-title {
-  font-weight: inherit;
-  color: white;
+    font-weight: inherit;
+    color: white;
 }
 
 .radio span {
-  display: block;
+    display: block;
 }
 
 .card:not(:last-child) {
-  margin-bottom: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
 }
-.card:not(:first-child) .card-header {
-  display: none !important;
-}
+
 .label::after {
-  content: " *";
-  color: #f14668;
+    content: " *";
+    color: #f14668;
 }
+
+.error {
+    color: #f14668;
+}
+
+.instructions {
+    text-align: justify;
+}
+
 #qrcode img {
-  display: initial !important;
+    display: initial !important;
 }
 
 @media only screen and (max-width: 600px) {
-  .scale label {
-    text-align: center;
-    max-width: 20%;
-    display: inline-grid;
-  }
+    .scale label {
+        text-align: center;
+        max-width: 20%;
+        display: inline-grid;
+    }
+}
+
+
+/* --- STEPS --- */
+
+.form-section {
+    display: none;
+}
+
+.form-section-active {
+    display: block;
+}
+
+
+/* Steps color */
+
+.steps:not(.is-hollow) .steps-marker:not(.is-hollow) {
+    background-color: var(--primary-color);
+}
+
+.steps:not(.is-hollow) .steps-segment.is-active .steps-marker:not(.is-hollow) {
+    background-color: var(--primary-color);
+}
+
+.steps-segment:after {
+    background-color: var(--primary-color);
 }

@@ -44,12 +44,9 @@ $cuq = array(
 );
 
 // Render true/false answer 
-function printTrueFalseQuestion($text,$id, $title){
+function printTrueFalseQuestion($text,$id){
     echo '
     <div class="card">
-        <header class="card-header">
-            <p class="card-header-title subtitle">'. $title .'</p>
-        </header>
         <div class="card-content">
             <div class="content">
                 <div class="field">
@@ -76,12 +73,9 @@ function printTrueFalseQuestion($text,$id, $title){
 }
 
 // Render scale answer 
-function printScaleQuestion($text,$id, $title){
+function printScaleQuestion($text,$id){
     echo '
     <div class="card">
-        <header class="card-header">
-            <p class="card-header-title subtitle">'. $title .'</p>
-        </header>
         <div class="card-content">
             <div class="content">
                 <div class="field">
