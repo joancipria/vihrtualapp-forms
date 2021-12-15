@@ -93,7 +93,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un chatbot para ofrecer información sobre el VIH y el SIDA. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> A continuación te pediremos que rellenes una serie de encuestas y pruebes el chatbot para que nos puedas dar tu opinión. Lee y sigue atentamente las instrucciones que se indiquen en cada paso y pulsa el botón 'Siguiente' para avanzar. <br><br>Para empezar, rellena los siguientes datos y pulsa en el botón 'Siguiente' para continuar.</p>
+                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un <strong>chatbot</strong> para ofrecer <strong>información sobre el VIH y el SIDA</strong>. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> A continuación te pediremos que rellenes una serie de encuestas y pruebes el chatbot para que nos puedas dar tu opinión. <strong>Lee y sigue atentamente las instrucciones que se indican</strong> en cada paso y pulsa el botón 'Siguiente' para avanzar. <br><br>Para empezar, rellena los siguientes datos y pulsa en el botón 'Siguiente' para continuar.</p>
                                     </div>
                                 </div>
                             </div>
@@ -202,14 +202,14 @@
                                 <div class="column">
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <!-- <button onclick="prev()" class="button is-link">Anterior</button> -->
+                                            <!-- <button type="button" onclick="prev()" class="button is-link">Anterior</button> -->
                                         </div>
                                     </div>                                
                                 </div>
                                 <div class="column">
                                     <div class="field is-grouped is-grouped-right">
                                         <div class="control">
-                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                            <button type="button" onclick="next()" class="button is-link">Siguiente</button>
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +226,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">A continuación deseamos saber tus conocimientos actuales sobre el VIH. Indica si a las siguientes afirmaciones son verdaderas o falsas. En caso de no saber la respuesta marca la opción 'No lo sé'.</p>
+                                        <p class="instructions">Primeramente, deseamos conocer tu conocimiento actual sobre el VIH. <strong>Indica si a las siguientes afirmaciones son verdaderas o falsas</strong>. En caso de no saber la respuesta, no te preocupes, simplemente marca la opción 'No lo sé'.</p>
                                     </div>
                                 </div>
                             </div>
@@ -248,14 +248,14 @@
                                 <div class="column">
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                            <button type="button" onclick="prev()" class="button is-link">Anterior</button>
                                         </div>
                                     </div>                                
                                 </div>
                                 <div class="column">
                                     <div class="field is-grouped is-grouped-right">
                                         <div class="control">
-                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                            <button type="button" type="button" onclick="next()" class="button is-link">Siguiente</button>
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Ha llegado el momento de probar el VIHrtual-App y realizarle algunas preguntas al chatbot. Utiliza tu teléfono móvil para escanear el código QR y acceder a la aplicación. Una vez hayas accedido, pulsa 'Siguiente' para continuar.<br><br> En caso de no poder escanearlo, haz click sobre el enlace situado debajo del QR 'Acceder manualmente'.</p>
+                                        <p class="instructions">Ha llegado el momento de probar VIHrtual-App y realizarle algunas preguntas al chatbot. Para ello, <strong>utiliza tu teléfono móvil y escanea el código QR para acceder a la aplicación</strong>. Una vez hayas accedido, pulsa 'Siguiente' para conocer los siguientes pasos.<br><br> En caso de no poder escanear el código, accede desde el ordenador haciendo click sobre el enlace situado debajo del QR 'Acceder manualmente'.</p>
                                     </div>
                                 </div>
                             </div>
@@ -292,14 +292,14 @@
                                 <div class="column">
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                            <button type="button" onclick="prev()" class="button is-link">Anterior</button>
                                         </div>
                                     </div>                                
                                 </div>
                                 <div class="column">
                                     <div class="field is-grouped is-grouped-right">
                                         <div class="control">
-                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                            <button type="button" onclick="next()" class="button is-link">Siguiente</button>
                                         </div>
                                     </div>
                                 </div>
@@ -310,22 +310,35 @@
                 </span>
                 <span class="form-section">
                     <div class="columns">
-                        <div class="column has-text-centered is-half is-offset-one-quarter">
+                        <div class="column is-half is-offset-one-quarter">
                             <div class="card">
                                 <header class="card-header">
                                     <p class="card-header-title subtitle">4. Tareas</p>
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Tareas ...</p>
+                                        <p class="instructions">Una vez has accedido a VIHrtual-App te vamos a pedir que realices unas <strong>pequeñas tareas</strong>. Estas consisten simplemente en hacerle algunas preguntas al chatbot y que te las conteste dentro de un tiempo limitado.<br><br> A continuación puedes leer las tareas a llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea, quien te ha proporcionado esta encuesta te indicará cuándo se ha agotado el tiempo.</strong></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-content">
                                     <div class="content">
-                                        <h2 class="subtitle">Tarea 1
-                                        </h2>
+                                        <h3>Tarea 1</h3>
+                                        <p><strong>Objetivo:</strong> Averigua qué es el VIH y qué síntomas presenta.</p>
+
+                                        <h3>Tarea 2</h3>
+                                        <p><strong>Objetivo:</strong> Averigua cómo se transmite el VIH.</p>
+
+                                        <h3>Tarea 3</h3>
+                                        <p><strong>Objetivo:</strong> Averigua qué es la transmisión vertical.</p>
+
+                                        <h3>Tarea 4</h3>
+                                        <p><strong>Objetivo:</strong> Averigua si se continua investigando sobre el VIH.</p>
+
+                                        <h3>Tarea 5</h3>
+                                        <p><strong>Objetivo:</strong> Averigua cómo puedes realizarte una prueba de detección de VIH.</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -334,14 +347,14 @@
                                 <div class="column">
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                            <button type="button" onclick="prev()" class="button is-link">Anterior</button>
                                         </div>
                                     </div>                                
                                 </div>
                                 <div class="column">
                                     <div class="field is-grouped is-grouped-right">
                                         <div class="control">
-                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                            <button type="button" onclick="next()" class="button is-link">Siguiente</button>
                                         </div>
                                     </div>
                                 </div>
@@ -359,7 +372,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">A continuación deseamos si tus conocimientos sobre el VIH han mejorado después de utilizar VIHrtual-App. Para ello responderas de nuevo a la encuesta anterior. Indica si a las siguientes afirmaciones son verdaderas o falsas. En caso de no saber la respuesta marca la opción 'No lo sé'.</p>
+                                        <p class="instructions">Tras utilizar el chatbot deseamos saber si tus conocimientos sobre el VIH han mejorado. Para ello, <strong>responde de nuevo</strong> a la encuesta anterior. <strong>Indica si las siguientes afirmaciones son verdaderas o falsas</strong>. En caso de no saber la respuesta, no te preocupes, simplemente marca la opción 'No lo sé'.</p>
                                     </div>
                                 </div>
                             </div>
@@ -379,14 +392,14 @@
                                 <div class="column">
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <button onclick="prev()" class="button is-link">Anterior</button>
+                                            <button type="button" onclick="prev()" class="button is-link">Anterior</button>
                                         </div>
                                     </div>                                
                                 </div>
                                 <div class="column">
                                     <div class="field is-grouped is-grouped-right">
                                         <div class="control">
-                                            <button onclick="next()" class="button is-link">Siguiente</button>
+                                            <button type="button" onclick="next()" class="button is-link">Siguiente</button>
                                         </div>
                                     </div>
                                 </div>
@@ -404,7 +417,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Por último, queremos que valores tu experiencia con VIHrtual-App. Valora tu conformidad con las siguientes afirmaciones utilizando una escala del 1 al 5, siendo 1 que estás totalmente en desacuerdo y el 5 totalmente de acuerdo.<br><br> Una vez contestadas todas la preguntas, pulsa 'Enviar' para finalizar la encuesta</p>
+                                        <p class="instructions">Por último, queremos que valores tu experiencia con VIHrtual-App. <strong>Valora tu conformidad con las siguientes afirmaciones utilizando una escala del 1 al 5, siendo 1 que estás totalmente en desacuerdo y el 5 totalmente de acuerdo</strong>.<br><br> Una vez contestadas todas la preguntas, pulsa 'Enviar' para finalizar la prueba.</p>
                                     </div>
                                 </div>
                             </div>
@@ -420,9 +433,20 @@
                                     $cuqCounter +=1;
                                 }
                             ?>
-                            <div class="field is-grouped is-grouped-centered">
-                                <div class="control">
-                                    <input type="submit" class="button is-link" value="Enviar">
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button type="button" onclick="prev()" class="button is-link">Anterior</button>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <input type="submit" class="button is-link" value="Enviar">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

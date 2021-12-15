@@ -69,13 +69,17 @@ const form = document.getElementById('form');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    // Check answers before submit 
+    if (!checkAnswers()) {
+        return;
+    }
+
     const data = new FormData(form);
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://vihrtualapp.gti-ia.upv.es/encuesta/sendForm.php');
     xhr.onload = () => {
         if (xhr.status === 200) {
-            // if the response is json encoded
             let response = xhr.responseText;
 
             if (response == 'valid') {
@@ -87,6 +91,9 @@ form.addEventListener('submit', (event) => {
                 next();
                 console.error(response);
             }
+        } else {
+            document.getElementById('result').innerHTML = "<span class='error'>Error: </span>No se pudo contactar con el servidor";
+            next();
         }
     }
     xhr.send(data);
