@@ -6,7 +6,7 @@ $hiv18 = array(
     "El toser o estornudar NO extiende el contagio de VIH", 
     "Una persona puede contagiarse con VIH si comparte un vaso de agua que ha utilizado una persona infectada de VIH", 
     "Sacar el pene antes de que el varón eyacule evita que la mujer se contagie con el virus VIH durante las relaciones sexuales",
-    "Una mujer puede infectarse con el VIH si tiene relaciones sexuales anales con un hombre.",
+    "Una mujer puede infectarse con el VIH si tiene relaciones sexuales anales con un hombre",
     "Ducharse o lavarse los genitales/ partes privadas después de mantener relaciones sexuales evita que la persona se infecte con VIH",
     "Toda mujer embarazada, infectada con VIH, tendrá niños infectados con VIH",
     "Personas que están infectadas con el VIH rápidamente muestran signos o síntomas de que está contagiados/as",
