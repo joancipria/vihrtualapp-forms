@@ -2,9 +2,11 @@
 <?php
 // Id ID is set
 if (isset($_POST["id"])) {
+    $date = new DateTime();
     // Store form result
     $check = store(
-        $_POST["id"], 
+        $_POST["id"],
+        $date->getTimestamp(),
         $_POST["age"], 
         $_POST["gender"], 
         $_POST["studies"], 
