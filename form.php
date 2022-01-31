@@ -3,24 +3,24 @@
 
 // HIV-KQ-18
 $hiv18 = array(
-    "El toser o estornudar NO extiende el contagio de VIH", 
-    "Una persona puede contagiarse con VIH si comparte un vaso de agua que ha utilizado una persona infectada de VIH", 
-    "Sacar el pene antes de que el varón eyacule evita que la mujer se contagie con el virus VIH durante las relaciones sexuales",
-    "Una mujer puede infectarse con el VIH si tiene relaciones sexuales anales con un hombre",
-    "Ducharse o lavarse los genitales/ partes privadas después de mantener relaciones sexuales evita que la persona se infecte con VIH",
-    "Toda mujer embarazada, infectada con VIH, tendrá niños infectados con VIH",
-    "Personas que están infectadas con el VIH rápidamente muestran signos o síntomas de que está contagiados/as",
-    "Existe una vacuna que evita que la persona adulta se infecte con el VIH",
-    "Las personas son más propensas a infectarse cuando se dan besos profundos, o colocan sus lenguas dentro de la boca de sus parejas que está infectada con VIH",
-    "Una mujer no puede contagiarse con VIH si tiene relaciones sexuales durante su menstruación",
-    "Existe un condón femenino que ayuda a reducir el riesgo de infectarse con VIH",
-    "Un condón de piel es mejor para prevenir el contagio de VIH que un condón de látex",
-    "Una persona que esté tomando antibióticos no se contagiará con VIH si tiene relaciones sexuales",
-    "Tener relaciones sexuales con más de una pareja sexual aumenta la probabilidad de que se infecte con VIH",
-    "Realizarse una prueba para determinar si se está infectado con VIH una semana después de haber tenido relaciones sexuales puede determinar si la persona está infectada o no",
-    "Una persona puede infectarse con VIH compartiendo un baño termal (yacuzzi) o una piscina con una persona infectada con el VIH",
-    "Una persona puede contagiarse con VIH cuando sostiene relaciones sexuales de forma oral",
-    "Utilizar vaselina o aceite para bebé con los condones reduce el riesgo de infectarse con VIH"
+    array("El toser o estornudar NO extiende el contagio de VIH",true), 
+    array("Una persona puede contagiarse con VIH si comparte un vaso de agua que ha utilizado una persona infectada de VIH", false), 
+    array("Sacar el pene antes de que el varón eyacule evita que la mujer se contagie con el virus VIH durante las relaciones sexuales",false),
+    array("Una mujer puede infectarse con el VIH si tiene relaciones sexuales anales con un hombre",true),
+    array("Ducharse o lavarse los genitales/ partes privadas después de mantener relaciones sexuales evita que la persona se infecte con VIH",false),
+    array("Toda mujer embarazada, infectada con VIH, tendrá niños infectados con VIH",false),
+    array("Personas que están infectadas con el VIH rápidamente muestran signos o síntomas de que está contagiados/as",false),
+    array("Existe una vacuna que evita que la persona adulta se infecte con el VIH",false),
+    array("Las personas son más propensas a infectarse cuando se dan besos profundos, o colocan sus lenguas dentro de la boca de sus parejas que está infectada con VIH",false),
+    array("Una mujer no puede contagiarse con VIH si tiene relaciones sexuales durante su menstruación",false),
+    array("Existe un condón femenino que ayuda a reducir el riesgo de infectarse con VIH",true),
+    array("Un condón de piel es mejor para prevenir el contagio de VIH que un condón de látex",false),
+    array("Una persona que esté tomando antibióticos no se contagiará con VIH si tiene relaciones sexuales",false),
+    array("Tener relaciones sexuales con más de una pareja sexual aumenta la probabilidad de que se infecte con VIH",true),
+    array("Realizarse una prueba para determinar si se está infectado con VIH una semana después de haber tenido relaciones sexuales puede determinar si la persona está infectada o no",false),
+    array("Una persona puede infectarse con VIH compartiendo un baño termal (yacuzzi) o una piscina con una persona infectada con el VIH",false),
+    array("Una persona puede contagiarse con VIH cuando sostiene relaciones sexuales de forma oral",true),
+    array("Utilizar vaselina o aceite para bebé con los condones reduce el riesgo de infectarse con VIH",false)
 );
 
 // CUQ
@@ -44,7 +44,9 @@ $cuq = array(
 );
 
 // Render true/false answer 
-function printTrueFalseQuestion($text,$id){
+function printTrueFalseQuestion($text,$id, $answer){
+    $trueValue = ($answer == true)?'1':'0';
+    $falseValue = ($answer == false)?'1':'0';
     echo '
     <div class="card">
         <div class="card-content">
@@ -53,15 +55,15 @@ function printTrueFalseQuestion($text,$id){
                     <label class="label">'. $text .'</label>
                     <div class="control">
                         <label class="radio">
-                            <input type="radio" value="1" name="'. $id .'" required>
+                            <input type="radio" value="'.$trueValue.'" name="'. $id .'" required>
                             Verdadero
                         </label>
                         <label class="radio">
-                        <input type="radio" value="0" name="'. $id .'" required>
+                        <input type="radio" value="'.$falseValue.'" name="'. $id .'" required>
                         Falso
                         </label>
                         <label class="radio">
-                        <input type="radio" value="-1" name="'. $id .'" required>
+                        <input type="radio" value="0" name="'. $id .'" required>
                         No lo sé
                         </label>
                     </div>
