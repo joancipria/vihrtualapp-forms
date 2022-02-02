@@ -68,19 +68,18 @@
                             </li>
                             <li class="steps-segment">
                                 <span class="steps-marker">
-                                    6
-                                    <!-- <span class="icon">
-                                        <i data-feather="clipboard"></i>
-                                    </span> -->
-                                </span>
-                            </li>
-                            <li class="steps-segment">
-                                <span class="steps-marker">
                                     <span class="icon">
                                         <i data-feather="check"></i>
                                     </span>
                                 </span>
                             </li>
+                            <!-- <li class="steps-segment">
+                                <span class="steps-marker">
+                                    <span class="icon">
+                                        <i data-feather="check"></i>
+                                    </span>
+                                </span>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -93,17 +92,34 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un <strong>chatbot</strong> para ofrecer <strong>información sobre el VIH y el SIDA</strong>. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> A continuación te pediremos que rellenes una serie de encuestas y pruebes el chatbot para que nos puedas dar tu opinión. <strong>Lee y sigue atentamente las instrucciones que se indican</strong> en cada paso y pulsa el botón 'Siguiente' para avanzar. <br><br>Para empezar, rellena los siguientes datos y pulsa en el botón 'Siguiente' para continuar.</p>
+                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un <strong>chatbot</strong> para ofrecer <strong>información sobre el VIH y el SIDA</strong>. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> A continuación te pediremos que rellenes un encuesta y pruebes el chatbot para que nos puedas dar tu opinión. <strong>Lee y sigue atentamente las instrucciones que se indican</strong> en cada paso y pulsa el botón 'Siguiente' para avanzar. <br><br>Para empezar, rellena los siguientes datos y pulsa en el botón 'Siguiente' para continuar.</p>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">1. General</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <div class="field">
+                                            <label class="label checkbox">
+                                            <input name="agree" type="checkbox" required>
+                                            He leído y acepto los <a target="_blank" href="terms.html">términos y condiciones</a>. Los datos compartidos están sujetos al RGPD, son anónimos y tienen como único fin la investigación.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="card">
                                 <div class="card-content">
                                     <div class="content">
                                         <div class="field">
                                             <label class="label">Edad</label>
                                             <div class="control has-icons-right">
-                                                <input name="age" class="input" type="number" min="18" max="100"
+                                                <input name="age" class="input" type="number" min="12" max="80"
                                                     placeholder="Edad" required>
                                             </div>
                                         </div>
@@ -226,7 +242,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Primeramente, deseamos conocer tu conocimiento actual sobre el VIH. <strong>Indica si a las siguientes afirmaciones son verdaderas o falsas</strong>. En caso de no saber la respuesta, no te preocupes, simplemente marca la opción 'No lo sé'.</p>
+                                        <p class="instructions">Primeramente, deseamos conocer tu conocimiento actual sobre el VIH. <strong>Indica si las siguientes afirmaciones son verdaderas o falsas</strong>. En caso de no saber la respuesta, no te preocupes, simplemente marca la opción 'No lo sé'.</p>
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +255,7 @@
                                     $id = 'k'. $hivCounter;
 
                                     // Render answer
-                                    printTrueFalseQuestion($text,$id);
+                                    printTrueFalseQuestion($text[0],$id, $text[1]);
                                     
                                     $hivCounter +=1;
                                 }
@@ -264,7 +280,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="form-section">
+                <!-- <span class="form-section">
                     <div class="columns">
                         <div class="column has-text-centered is-half is-offset-one-quarter">
                             <div class="card">
@@ -274,6 +290,12 @@
                                 <div class="card-content">
                                     <div class="content">
                                         <p class="instructions">Ha llegado el momento de probar VIHrtual-App y realizarle algunas preguntas al chatbot. Para ello, <strong>utiliza tu teléfono móvil y escanea el código QR para acceder a la aplicación</strong>. Una vez hayas accedido, pulsa 'Siguiente' para conocer los siguientes pasos.<br><br> En caso de no poder escanear el código, accede desde el ordenador haciendo click sobre el enlace situado debajo del QR 'Acceder manualmente'.</p>
+                                    </div>
+                                </div> 
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">Ha llegado el momento de probar VIHrtual-App y realizarle algunas preguntas al chatbot. Para ello, <strong>pulsa el botón 'Acceder al chatbot' situado más abajo</strong>. Observarás como se abre una nueva pestaña en tu navegador. Llegado este momento, <strong>no interactúes todavía con la aplicación. Vuelve a este formulario y pulsa 'Siguiente' para conocer los siguientes pasos.</strong><br><br> Si en algún momento cierras la pestaña con la aplicación, no te preocupes, <strong>vuelve a esta sección y pulsa de nuevo sobre el botón para acceder</strong>.</p>
+                                        <a class="button" target="_blank" id="manualLink" href="">Acceder al chatbot</a>
                                     </div>
                                 </div>
                             </div>
@@ -286,7 +308,7 @@
                                         </h2>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
 
                             <div class="columns is-mobile">
                                 <div class="column">
@@ -307,21 +329,48 @@
 
                         </div>
                     </div>
-                </span>
+                </span> -->
                 <span class="form-section">
                     <div class="columns">
                         <div class="column is-half is-offset-one-quarter">
                             <div class="card">
                                 <header class="card-header">
-                                    <p class="card-header-title subtitle">4. Tareas</p>
+                                    <p class="card-header-title subtitle">3. Tareas</p>
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Una vez has accedido a VIHrtual-App te vamos a pedir que realices unas <strong>pequeñas tareas</strong>. Estas consisten simplemente en hacerle algunas preguntas al chatbot y que te las conteste dentro de un tiempo limitado.<br><br> A continuación puedes leer las tareas a llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea, quien te ha proporcionado esta encuesta te indicará cuándo se ha agotado el tiempo.</strong></p>
+                                        <!-- <p class="instructions">Una vez has accedido a VIHrtual-App te vamos a pedir que realices unas <strong>pequeñas tareas</strong>. Estas consisten simplemente en hacerle algunas preguntas al chatbot y que te las conteste dentro de un tiempo limitado.<br><br> A continuación puedes leer las tareas a llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea, quien te ha proporcionado esta encuesta te indicará cuándo se ha agotado el tiempo.</strong></p> -->
+                                        <!-- <p class="instructions">Una vez has accedido a VIHrtual-App te vamos a pedir que realices unas <strong>pequeñas tareas</strong>. Estas consisten simplemente en hacerle algunas preguntas al chatbot y que te las conteste dentro de un tiempo limitado.<br><br> A continuación puedes leer las tareas a llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea, pero no te preocupes, son muy fáciles de hacer 😉.</strong><br><br>Cuando estés listo, <strong>vuelve a la pestaña del chatbot y pulsa 'Empezar' para comenzar</strong> a hacer las tareas. Cuando hayas terminado, <strong>vuelve al formulario y pulsa 'Siguiente' para avanzar</strong>.</p> -->
+                                        <p class="instructions">
+                                        Ha llegado el momento de probar VIHrtual-App, y para ello te vamos a pedir que realices una serie de pequeñas tareas. Estas consisten en hacerle algunas preguntas al chatbot y que te las conteste dentro de un tiempo limitado.
+                                        <br><br>
+                                        A continuación puedes leer las tareas que debes llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea</strong>, pero no te preocupes, son muy fáciles de hacer 😉. Échales primero un vistazo:
+                                        <br><br>
+                                        <h3>Tarea 1</h3>
+                                        <p><strong>Objetivo:</strong> Averigua qué es el VIH y qué síntomas presenta.</p>
+
+                                        <h3>Tarea 2</h3>
+                                        <p><strong>Objetivo:</strong> Averigua cómo se transmite el VIH.</p>
+
+                                        <h3>Tarea 3</h3>
+                                        <p><strong>Objetivo:</strong> Averigua qué es la transmisión vertical.</p>
+
+                                        <h3>Tarea 4</h3>
+                                        <p><strong>Objetivo:</strong> Averigua si se continúa investigando sobre el VIH.</p>
+
+                                        <h3>Tarea 5</h3>
+                                        <p><strong>Objetivo:</strong> Averigua cómo puedes realizarte una prueba de detección de VIH.</p>
+                                        <br><br>
+                                        Cuando estés listo, <strong>pulsa el botón 'Acceder al chatbot' situado más abajo para abrir VIHrtual-App</strong>. Observarás como se abre una nueva pestaña en tu navegador. <strong>Dentro del chatbot pulsa 'Empezar' para comenzar a hacer las tareas. Cuando hayas terminado, vuelve al formulario y pulsa 'Siguiente' para avanzar.</strong></p>
+                                        <div class="mt-5" style="width: 100%; text-align: center">
+                                            <a class="button" target="_blank" id="manualLink" href="">Acceder al chatbot</a>
+                                        </div>
+                                        <br>                                      
+                                        <p class="instructions">Si en algún momento cierras la pestaña con la aplicación, no te preocupes, vuelve a esta sección y pulsa de nuevo sobre el botón para acceder.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <!-- <div class="card">
                                 <div class="card-content">
                                     <div class="content">
                                         <h3>Tarea 1</h3>
@@ -334,14 +383,14 @@
                                         <p><strong>Objetivo:</strong> Averigua qué es la transmisión vertical.</p>
 
                                         <h3>Tarea 4</h3>
-                                        <p><strong>Objetivo:</strong> Averigua si se continua investigando sobre el VIH.</p>
+                                        <p><strong>Objetivo:</strong> Averigua si se continúa investigando sobre el VIH.</p>
 
                                         <h3>Tarea 5</h3>
                                         <p><strong>Objetivo:</strong> Averigua cómo puedes realizarte una prueba de detección de VIH.</p>
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="columns is-mobile">
                                 <div class="column">
@@ -383,7 +432,7 @@
                                 $id = 'k'. $hivCounter;
 
                                 // Render answer
-                                printTrueFalseQuestion($text,$id);
+                                printTrueFalseQuestion($text[0],$id, $text[1]);
                                 $hivCounter +=1;
                             }
                             ?>
@@ -462,9 +511,9 @@
                                 <div class="card-content">
                                     <div class="content">
                                         <h1 id="result" class="title"></h1>
-                                        <p >Muchas gracias por participar.</p>
-                                        <br>
-                                        <a href="index.php" class="button is-link">Nueva encuesta</a>
+                                        <p>Muchas gracias por participar.</p>
+                                        <!-- <br>
+                                        <a href="index.php" class="button is-link">Nueva encuesta</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -477,14 +526,14 @@
     <script>
         // Create unique ID
         const random = Math.random();
-        const id = random.toString(36).substr(2, random.length);
+        const id = "upv"+random.toString(36).substr(2, random.length);
 
         // Fill hidden input with ID
         document.getElementById("id").value = id;
 
         // Generate QR code with ID param
-        var qrcode = new QRCode("qrcode");
-        qrcode.makeCode("http://vihrtualapp.gti-ia.upv.es?id=" + id);
+        //var qrcode = new QRCode("qrcode");
+        //qrcode.makeCode("http://vihrtualapp.gti-ia.upv.es?id=" + id);
         document.getElementById("manualLink").href = "http://vihrtualapp.gti-ia.upv.es?id=" + id;
         
         // Feather icons
