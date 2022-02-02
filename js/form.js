@@ -84,7 +84,7 @@ form.addEventListener('submit', (event) => {
 
             if (response == 'valid') {
                 // redirect here
-                document.getElementById('result').innerHTML = "¡Encuesta guardada con éxito!";
+                document.getElementById('result').innerHTML = "¡Encuesta enviada con éxito!";
                 next();
             } else {
                 document.getElementById('result').innerHTML = "<span class='error'>Error: </span>No se pudo guardar la encuesta";
