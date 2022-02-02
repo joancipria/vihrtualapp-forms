@@ -3,6 +3,7 @@
 :root {
     --primary-color: #485fc7;
     --secondary-color: #3f51b5;
+    --alternative-color: #ccd5fd;
 }
 
 html {
@@ -38,6 +39,10 @@ header.card-header {
 .label::after {
     content: " *";
     color: #f14668;
+}
+
+.label.checkbox {
+    font-weight: normal;
 }
 
 .error {
@@ -84,4 +89,16 @@ header.card-header {
 
 .steps-segment:after {
     background-color: var(--primary-color);
+}
+
+.steps-segment.is-active::after {
+    background-color: var(--alternative-color);
+}
+
+.steps-segment.is-active~.steps-segment::after {
+    background-color: var(--alternative-color);
+}
+
+.steps:not(.is-hollow) .steps-segment.is-active~.steps-segment .steps-marker:not(.is-hollow) {
+    background-color: var(--alternative-color);
 }
