@@ -67,19 +67,21 @@
                                 </span>
                             </li>
                             <li class="steps-segment">
+                                
+                                <span class="steps-marker">
+                                    6
+                                    <!-- <span class="icon">
+                                        <i data-feather="check"></i>
+                                    </span> -->
+                                </span>
+                            </li>
+                            <li class="steps-segment">
                                 <span class="steps-marker">
                                     <span class="icon">
                                         <i data-feather="check"></i>
                                     </span>
                                 </span>
                             </li>
-                            <!-- <li class="steps-segment">
-                                <span class="steps-marker">
-                                    <span class="icon">
-                                        <i data-feather="check"></i>
-                                    </span>
-                                </span>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -88,27 +90,62 @@
                         <div class="column is-half is-offset-one-quarter">
                             <div class="card">
                                 <header class="card-header">
-                                    <p class="card-header-title subtitle">1. General</p>
+                                    <p class="card-header-title subtitle">1. Consentimiento</p>
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un <strong>chatbot</strong> para ofrecer <strong>información sobre el VIH y el SIDA</strong>. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> A continuación te pediremos que rellenes un encuesta y pruebes el chatbot para que nos puedas dar tu opinión. <strong>Lee y sigue atentamente las instrucciones que se indican</strong> en cada paso y pulsa el botón 'Siguiente' para avanzar. <br><br>Para empezar, rellena los siguientes datos y pulsa en el botón 'Siguiente' para continuar.</p>
+                                        <p class="instructions">Bienvenido y gracias por participar en esta prueba. La Universitat Politècnica de València junto con el Hospital de Elche está desarrollando un <strong>chatbot</strong> para ofrecer <strong>información sobre el VIH y el SIDA</strong>. Actualmente deseamos ver si funciona como se pretende, y para ello estamos realizando un pequeño estudio.<br><br> 
+                                        Para participar en la prueba primero <strong>debes leer <a target="_blank" href="terms.html">los términos y condiciones</a> y, si estas de acuerdo, dar tu consentimiento marcando la casilla "He leído y acepto los términos y condiciones"</strong>.<br><br>Te recordamos que los datos compartidos están sujetos al RGPD, <strong>son anónimos y tienen como único fin la investigación</strong>. Una vez aceptados, pulsa 'Siguiente' para empezar.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card">
-                                <header class="card-header">
-                                    <p class="card-header-title subtitle">1. General</p>
-                                </header>
                                 <div class="card-content">
                                     <div class="content">
                                         <div class="field">
                                             <label class="label checkbox">
                                             <input name="agree" type="checkbox" required>
-                                            He leído y acepto los <a target="_blank" href="terms.html">términos y condiciones</a>. Los datos compartidos están sujetos al RGPD, son anónimos y tienen como único fin la investigación.
+                                            He leído y acepto los <a target="_blank" href="terms.html">términos y condiciones</a>.
                                             </label>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <!-- <button type="button" onclick="prev()" class="button is-link">Anterior</button> -->
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="column">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="control">
+                                            <button type="button" onclick="next()" class="button is-link">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <span class="form-section">
+                    <div class="columns">
+                        <div class="column is-half is-offset-one-quarter">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title subtitle">2. General</p>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <p class="instructions">
+                                        Muchas gracias por participar en este estudio. Durante la prueba te pediremos que rellenes una serie de encuestas y pruebes el chatbot para que nos puedas dar tu opinión. <strong>Lee y sigue atentamente las instrucciones que se indiquen</strong> en cada paso y pulsa el botón 'Siguiente' para avanzar.<br><br> Para empezar, rellena los siguientes datos:
+
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +255,7 @@
                                 <div class="column">
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <!-- <button type="button" onclick="prev()" class="button is-link">Anterior</button> -->
+                                            <button type="button" onclick="prev()" class="button is-link">Anterior</button>
                                         </div>
                                     </div>                                
                                 </div>
@@ -242,7 +279,7 @@
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        <p class="instructions">Primeramente, deseamos conocer tu conocimiento actual sobre el VIH. <strong>Indica si las siguientes afirmaciones son verdaderas o falsas</strong>. En caso de no saber la respuesta, no te preocupes, simplemente marca la opción 'No lo sé'.</p>
+                                        <p class="instructions">A continuación deseamos conocer tu conocimiento actual sobre el VIH. <strong>Indica si las siguientes afirmaciones son verdaderas o falsas</strong>. En caso de no saber la respuesta, no te preocupes, simplemente marca la opción 'No lo sé'.</p>
                                     </div>
                                 </div>
                             </div>
@@ -344,7 +381,7 @@
                                         <p class="instructions">
                                         Ha llegado el momento de probar VIHrtual-App, y para ello te vamos a pedir que realices una serie de pequeñas tareas. Estas consisten en hacerle algunas preguntas al chatbot y que te las conteste dentro de un tiempo limitado.
                                         <br><br>
-                                        A continuación puedes leer las tareas que debes llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea</strong>, pero no te preocupes, son muy fáciles de hacer 😉. Échales primero un vistazo:
+                                        A continuación puedes leer las tareas que debes llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea</strong>, pero no te preocupes, son muy fáciles de hacer 😉. Échales un vistazo primero:
                                         <br><br>
                                         <h3>Tarea 1</h3>
                                         <p><strong>Objetivo:</strong> Averigua qué es el VIH y qué síntomas presenta.</p>
@@ -362,7 +399,7 @@
                                         <p><strong>Objetivo:</strong> Averigua cómo puedes realizarte una prueba de detección de VIH.</p>
                                         <br><br>
                                         Cuando estés listo, <strong>pulsa el botón 'Acceder al chatbot' situado más abajo para abrir VIHrtual-App</strong>. Observarás como se abre una nueva pestaña en tu navegador. <strong>Dentro del chatbot pulsa 'Empezar' para comenzar a hacer las tareas. Cuando hayas terminado, vuelve al formulario y pulsa 'Siguiente' para avanzar.</strong></p>
-                                        <div class="mt-5" style="width: 100%; text-align: center">
+                                        <div class="mt-6 mb-5" style="width: 100%; text-align: center">
                                             <a class="button" target="_blank" id="manualLink" href="">Acceder al chatbot</a>
                                         </div>
                                         <br>                                      
