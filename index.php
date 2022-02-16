@@ -25,7 +25,7 @@
                 <div class="columns">
                     <div class="column is-half is-offset-one-quarter">
                         <h1 class="title">Encuesta VIHrtual-App</h1>
-                        <ul class="steps">
+                        <ul class="steps is-horizontal">
                             <li class="steps-segment is-active">
                                 <span class="steps-marker">
                                     1
