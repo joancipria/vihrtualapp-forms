@@ -14,7 +14,7 @@ $hiv18 = array(
     array("Las personas son más propensas a infectarse cuando se dan besos profundos, o colocan sus lenguas dentro de la boca de sus parejas que está infectada con VIH",false),
     array("Una mujer no puede contagiarse con VIH si tiene relaciones sexuales durante su menstruación",false),
     array("Existe un condón femenino que ayuda a reducir el riesgo de infectarse con VIH",true),
-    array("Un condón de piel es mejor para prevenir el contagio de VIH que un condón de látex",false),
+    array("Un condón de piel natural es mejor para prevenir el contagio de VIH que un condón de látex",false),
     array("Una persona que esté tomando antibióticos no se contagiará con VIH si tiene relaciones sexuales",false),
     array("Tener relaciones sexuales con más de una pareja sexual aumenta la probabilidad de que se infecte con VIH",true),
     array("Realizarse una prueba para determinar si se está infectado con VIH una semana después de haber tenido relaciones sexuales puede determinar si la persona está infectada o no",false),
@@ -41,6 +41,20 @@ $cuq = array(
     "El chatbot parecía incapaz de manejar cualquier error",
     "El chatbot era muy fácil de usar",
     "El chatbot era muy complejo"
+);
+
+// SUS
+$sus = array(
+    "Me gustaría usar esta herramienta frecuentemente",
+    "Considero que esta herramienta es innecesariamente compleja",
+    "Considero que la herramienta es fácil de usar",
+    "Considero necesario el apoyo de personal experto para poder utilizar esta herramienta",
+    "Considero que las funciones de la herramienta están bien integradas",
+    "Considero que la herramienta presenta muchas contradicciones",
+    "Imagino que la mayoría de las personas aprenderían a usar esta herramienta rápidamente",
+    "Considero que el uso de esta herramienta es tedioso",
+    "Me sentí muy confiado al usar la herramienta",
+    "Necesité saber bastantes cosas antes de poder empezar a usar esta herramienta"
 );
 
 // Render true/false answer 

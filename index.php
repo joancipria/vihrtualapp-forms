@@ -22,6 +22,7 @@
         <div id="tab-content" class="container">
             <form id="form" action="" method="post">
                 <input id="id" name="id" type="text" hidden>
+                <input id="device" name="device" type="text" hidden>
                 <div class="columns">
                     <div class="column is-half is-offset-one-quarter">
                         <h1 class="title">Encuesta VIHrtual-App</h1>
@@ -384,18 +385,21 @@
                                         A continuación puedes leer las tareas que debes llevar a cabo. <strong>Ejecútalas una por una y pregúntale al chatbot todo aquello que consideres necesario para conseguir el objetivo descrito. Tienes 2 minutos para cada tarea</strong>, pero no te preocupes, son muy fáciles de hacer 😉. Échales un vistazo primero:
                                         <br><br>
                                         <h3>Tarea 1</h3>
-                                        <p><strong>Objetivo:</strong> Averigua qué es el VIH y qué síntomas presenta.</p>
+                                        <p><strong>Objetivo:</strong> Averigua qué es el VIH.</p>
 
                                         <h3>Tarea 2</h3>
-                                        <p><strong>Objetivo:</strong> Averigua cómo se transmite el VIH.</p>
+                                        <p><strong>Objetivo:</strong> Averigua qué síntomas presenta el VIH.</p>
 
                                         <h3>Tarea 3</h3>
-                                        <p><strong>Objetivo:</strong> Averigua qué es la transmisión vertical.</p>
-
-                                        <h3>Tarea 4</h3>
-                                        <p><strong>Objetivo:</strong> Averigua si se continúa investigando sobre el VIH.</p>
+                                        <p><strong>Objetivo:</strong> Averigua cómo se transmite el VIH.</p>
 
                                         <h3>Tarea 5</h3>
+                                        <p><strong>Objetivo:</strong> Averigua qué es la transmisión vertical.</p>
+
+                                        <h3>Tarea 5</h3>
+                                        <p><strong>Objetivo:</strong> Averigua si se continúa investigando sobre el VIH.</p>
+
+                                        <h3>Tarea 6</h3>
                                         <p><strong>Objetivo:</strong> Averigua cómo puedes realizarte una prueba de detección de VIH.</p>
                                         <br><br>
                                         Cuando estés listo, <strong>pulsa el botón 'Acceder al chatbot' situado más abajo para abrir VIHrtual-App</strong>. Observarás como se abre una nueva pestaña en tu navegador. <strong>Dentro del chatbot pulsa 'Empezar' para comenzar a hacer las tareas. Cuando hayas terminado, vuelve al formulario y pulsa 'Siguiente' para avanzar.</strong></p>
@@ -519,6 +523,31 @@
                                     $cuqCounter +=1;
                                 }
                             ?>
+                            <?php
+                                $susCounter = 1;
+                                
+                                // For each HIV-KQ-18 question 
+                                foreach($sus as $text) {
+                                    // Set answer id
+                                    $id = 's'. $susCounter;
+
+                                    printScaleQuestion($text,$id);
+                                    $susCounter +=1;
+                                }
+                            ?>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="content">
+                                        <div class="field">
+                                            <label class="label">Comentarios adicionales</label>
+                                            <div class="control">
+                                                <textarea name="comments" class="textarea" placeholder="¿Cómo ha sido tu experiencia? ¿Has tenido algún problema?"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="columns is-mobile">
                                 <div class="column">
                                     <div class="field is-grouped">
@@ -573,6 +602,7 @@
         //qrcode.makeCode("http://vihrtualapp.gti-ia.upv.es?id=" + id);
         document.getElementById("manualLink").href = "http://vihrtualapp.gti-ia.upv.es?id=" + id;
         
+        document.getElementById('device').value = navigator.userAgent || '';
         // Feather icons
         feather.replace();
     </script>

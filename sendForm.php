@@ -63,7 +63,19 @@ if (isset($_POST["id"])) {
         $_POST["c13"],   
         $_POST["c14"],   
         $_POST["c15"],   
-        $_POST["c16"]   
+        $_POST["c16"],    
+        $_POST["s1"],    
+        $_POST["s2"],    
+        $_POST["s3"],    
+        $_POST["s4"],    
+        $_POST["s5"],    
+        $_POST["s6"],    
+        $_POST["s7"],    
+        $_POST["s8"],    
+        $_POST["s9"],    
+        $_POST["s10"],    
+        $_POST["comments"],  
+        $_POST["device"]  
     );
 
     // Check DB response
